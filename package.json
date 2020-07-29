@@ -1,0 +1,20 @@
+{
+  "name": "newproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-mocha-with-report": "mocha test --reporter mochawesome --reporter-options charts=true --reporter-options autoOpen=true",
+    "run-mocha": "mocha test"},
+  "author": "Albert Woloszyn",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^84.0.0",
+    "mocha": "^8.0.1",
+    "selenium-webdriver": "^3.6.0"
+  },
+  "devDependencies": {
+    "mochawesome": "^6.1.1",
+    "prettier": "2.0.5"
+  }
+}

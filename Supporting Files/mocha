@@ -1,0 +1,20 @@
+Open Source report that visualise all test results, displaying 
+
+1. Installing Mocha
+
+Open Terminal, and type the following:
+    sudo npm install -g mocha
+
+2. Installing mochawesome reporting
+
+    npm install -g mochawesome
+
+    call: mocha test --reporter mochawesome --reporter-options charts=true --reporter-options autoOpen=true
+
+
+OBSERVATIONS:
+Mocha is super similar to testNG
+
+
+
+"test": "echo \"Error: no test specified\" && exit 1"

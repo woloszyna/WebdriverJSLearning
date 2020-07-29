@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-29T05:26:38.632Z",
+    "end": "2020-07-29T05:26:47.739Z",
+    "duration": 9107,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a4e9bfd5-3e20-4d64-9007-a3c2e2b5346c",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2783cac2-a392-43d2-a4a0-6b4ce008cf1d",
+          "title": "Chrome assertions scenarios",
+          "fullFile": "/Users/albert.woloszyn/Projects/HighCode/JavaScript/newProject/test/assertions.chrome.test.js",
+          "file": "/test/assertions.chrome.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook: ret",
+              "fullTitle": "Chrome assertions scenarios \"before each\" hook: ret",
+              "timedOut": false,
+              "duration": 1887,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//start new browser and open the website before each scenario\ndriver = new webdriver.Builder().forBrowser('chrome').build();\ndriver.get('https://library-app.firebaseapp.com');\ndriver.manage().window().maximize();",
+              "err": {},
+              "uuid": "348cb3c0-8128-4da8-a8bc-51f3556a261c",
+              "parentUUID": "2783cac2-a392-43d2-a4a0-6b4ce008cf1d",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook: ret",
+              "fullTitle": "Chrome assertions scenarios \"after each\" hook: ret",
+              "timedOut": false,
+              "duration": 103,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver.quit();",
+              "err": {},
+              "uuid": "c920b145-1b40-4aac-81d4-185f828faa88",
+              "parentUUID": "2783cac2-a392-43d2-a4a0-6b4ce008cf1d",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "changes opacity when email being showed",
+              "fullTitle": "Chrome assertions scenarios changes opacity when email being showed",
+              "timedOut": false,
+              "duration": 175,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var button = driver.findElement(By.className('btn-primary'));\ndriver.findElement(By.css('input')).sendKeys('test1@email.com');\nreturn button.getCssValue('opacity').then(function(result){\n    assert(result === '1', \"Opacity of \" + result + \" detected\");\n/*\nin basic assertion, call for\n.then(function(xxx){\nassert(xxx === '1');\n})\nwhen asserting if value is <blah>\n*/\n    });",
+              "err": {},
+              "uuid": "9e8b39c0-bf19-41e6-9a2b-ae2a2026676e",
+              "parentUUID": "2783cac2-a392-43d2-a4a0-6b4ce008cf1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "displays alert",
+              "fullTitle": "Chrome assertions scenarios displays alert",
+              "timedOut": false,
+              "duration": 1987,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var button = driver.findElement(By.className('btn-primary'));\ndriver.findElement(By.css('input')).sendKeys('test1@email.com');\nbutton.click();\ndriver.wait(until.elementLocated(By.css('.alert-success')), 5000);\nvar message = driver.findElements(By.css('.alert-success')).then(function (result){\n    assert(result.length === 1, result.length + \" alert-success found\");\n\n/*\nin basic assertion, call for\n.then(function(xxx){\nassert(xxx.length === 1);\n})\nwhen asserting if only x element(s) is returned\nREMEMBER if asserting xxx.length, you have to use findElements (because you want to count the lenght from the array).\n*/\n    \n});",
+              "err": {},
+              "uuid": "efe449ca-c9ce-4698-9070-68307ce3ee6a",
+              "parentUUID": "2783cac2-a392-43d2-a4a0-6b4ce008cf1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "shows navigation bar",
+              "fullTitle": "Chrome assertions scenarios shows navigation bar",
+              "timedOut": false,
+              "duration": 10,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver.findElements(By.css('nav')).then(function (result) {\n    assert(result.length === 1, result.length + \" navbars found\");\n});",
+              "err": {},
+              "uuid": "3453b2e4-5daf-457e-a1ee-99d491caa183",
+              "parentUUID": "2783cac2-a392-43d2-a4a0-6b4ce008cf1d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9e8b39c0-bf19-41e6-9a2b-ae2a2026676e",
+            "efe449ca-c9ce-4698-9070-68307ce3ee6a",
+            "3453b2e4-5daf-457e-a1ee-99d491caa183"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2172,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "charts": "true",
+        "autoOpen": "true"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

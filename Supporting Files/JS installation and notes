@@ -1,0 +1,61 @@
+Operaations to be ran in Terminal
+
+1. Create a directory for your project
+  cd xxx/xxx/xxx
+  mkdir <name of your project>
+
+2.  Within the new directory run the following:
+
+    npm init --to create package.json file
+    DO not worry about details that go into JSON for now, just ENTER through all when asked
+
+3. Unlock safety files so all drivers can be downloaded without issues in npm
+
+    npm config set unsafe-perm=true
+
+4. Download and install webdrivers 'manually' (using npm) from https://www.selenium.dev/selenium/docs/api/javascript/index.html in order to use selenium with browsers.
+   Install webdrivers globally (-g) at the first attempt by following below.
+  3.1. Selenium WebDriver: Terminal > sudo npm install -g selenium-webdriver
+  3.2. Chromedriver: Terminal > sudo npm install -g  chromedriver (npm install -g chromedriver --chromedriver-force-download)
+  3.3. FirefoxDriver: Terminal > sudo npm install -g  geckodriver
+
+WARNING: In case when somethiong goes wrong with installation or you wish to do it again, please review the following directory (macOS):
+
+xxxxxxxxx
+
+4. Open project in atom (or other text editor capable of JS) <-- I ue Visual Studio Code, but it is any notepad capable of running JS
+  atom .
+
+5. Create the JS file
+cd <location of where you want all JS files to be stored>
+touch <name)of)theJS_file>.js
+
+
+6. Start writing automation in JS.
+
+
+==============================================================================================================================
+COMMANDS in terminal:
+touch <filename.extension> - creates the new file within the project directory
+rm <filename.extension> - removes the unneeded file from the project directory
+
+
+==============================================================================================================================
+NPM Commands:
+npm install selenium-webdriver@3.6.0 <-- version
+
+
+npm extensions
+npm install prettier -D --save-exact <-- good JS formatter
+==============================================================================================================================
+How to add commands to npm scripts
+
+1. Open and edit package JSON
+
+"scripts": {
+    "name as it will appear": "correct command",
+    },
+
+2. Save file and observe the Explorer > NPM SCRIPTS
+
+Reference: http://www.matthiassommer.it/programming/testing/run-npm-scripts-in-visual-studio-code-with-a-click-of-a-button/#:~:text=Start%20your%20scripts%20faster%20in%20VS%20Code&text=Thereby%2C%20the%20terminal%20is%20conveniently,%2C)%20and%20to%20enable%20npm.
