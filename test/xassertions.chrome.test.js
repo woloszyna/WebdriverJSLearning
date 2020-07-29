@@ -44,7 +44,6 @@ describe('Chrome assertions scenarios', function(){
         driver.wait(until.elementLocated(By.css('.alert-success')), 5000);
         var message = driver.findElements(By.css('.alert-success')).then(function (result){
             assert(result.length === 1, result.length + " alert-success found");
-            //blah
         
         /*
         in basic assertion, call for
