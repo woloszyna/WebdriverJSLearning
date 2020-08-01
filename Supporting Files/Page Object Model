@@ -45,7 +45,6 @@ Final content of the firstClass file
 module.exports = new HomePage;
 ============
 
-
 4. Create secondClass files that will call firstClass file
 Within the new secondClass file, create an object of the firstClass file
 
@@ -61,3 +60,12 @@ can be called
 
 6. When secondClass.js will be executed by ~node secondClass.js
 it will run the content of the firstClass.js, method navigateToThePage()
+
+============
+Using this. method
+When the base page is created, the driver normally cannot be shared.
+This can be resolved, when we add 'this.' to the driver.
+Ths automatically creates a var instance of the driver,
+and initialises it.
+There no need to instatiate the var driver
+outside of constructor method.
