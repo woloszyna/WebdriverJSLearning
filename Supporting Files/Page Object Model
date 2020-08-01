@@ -1,0 +1,27 @@
+PAGE OBJECT MODEL in JS
+
+
+1. Ensure that class can be exported
+When creating a class, at the end of it, after closing curly brackets of a class type the following:
+
+            module.exports = new <name of the class>;
+
+2. Create a constructor
+Constructor is something that gets automatically executed when instance of a class is created.
+Good practice is to place a driver constructor so the driver gets called every time when
+instance of a class is instantiated.
+
+            constructor() {
+            var driver = new webdriver.Builder().forBrowser('chrome').build();
+            }
+
+3. Make sure that the driver will have the ability to be re-used outside
+of a scope of constructor. To do this, create a varible outside of constructor instead.
+
+            vad driver;
+
+            constructor() {
+            driver = new webdriver.Builder().forBrowser('chrome').build();
+            }
+
+4. 
