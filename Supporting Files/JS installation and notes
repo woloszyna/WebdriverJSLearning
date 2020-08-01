@@ -1,3 +1,36 @@
+JS Install
+Manual installation
+
+
+Install npm
+
+
+Install correct webdriver:
+
+    Visit www.npmjs.com
+    type in 'selenium-webdriver' in the top search bar
+    when page populates, choose the relevant webdriver (chromedriver, geckodriver, etc), click on it to popluate respectful github page
+    Click the lates release to access
+    Click on the correct version (based on the system type) and zip folder will get downloaded
+    Open the zip folder and extract the content to the folder where all drivers will be placed (must be the same as it will be added as a environment variable)
+
+
+Adding folder with webdrivers in system variables in windows
+
+    Start > type 'variables' > click on Edit the system environment variables
+    When window populates, choose 'Path' in USer valiables for <username> > Edit
+    In the window that has populated, click on new and add the path to the folder with webdrivers
+    Click on OK button > OK again in the main environment variables window > OK in System Properties window
+    Verify if the variable was added successfully:
+        Open command prompt and type in start <name of the driver> to call the webdriver
+
+
+
+
+
+
+
+
 Operaations to be ran in Terminal
 
 1. Create a directory for your project

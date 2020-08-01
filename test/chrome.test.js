@@ -5,11 +5,11 @@ var webdriver = require('selenium-webdriver'),
     until = webdriver.until;
     var driver;
     
-describe('Chrome scenarios', function(){   
+describe('Firefox scenarios', function(){   
     this.timeout(50000);
-    beforeEach(function (){    
+    beforeEach(function () {    
         //start new browser and open the website before each scenario
-        driver = new webdriver.Builder().forBrowser('chrome').build();
+        driver = new webdriver.Builder().forBrowser('firefox').build();
         driver.get('https://library-app.firebaseapp.com');
         driver.manage().window().maximize();
     });
