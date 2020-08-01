@@ -1,7 +1,7 @@
-PAGE OBJECT MODEL in JS
+Very Basic PAGE OBJECT MODEL in JS
 
 
-1. Ensure that class can be exported
+1. Ensure that firstClass can be exported
 When creating a class, at the end of it, after closing curly brackets of a class type the following:
 
             module.exports = new <name of the class>;
@@ -24,4 +24,40 @@ of a scope of constructor. To do this, create a varible outside of constructor i
             driver = new webdriver.Builder().forBrowser('chrome').build();
             }
 
-4. 
+
+============
+Final content of the firstClass file
+
+            var webdriver = require('selenium-webdriver');
+            var driver;
+
+            class HomePage{
+
+            constructor() {
+            driver = new webdriver.Builder().forBrowser('chrome').build();
+            }
+
+            navigateToThePage() {
+            driver.get('http://www.thetestroom.com/webapp');
+            } 
+
+        }
+module.exports = new HomePage;
+============
+
+
+4. Create secondClass files that will call firstClass file
+Within the new secondClass file, create an object of the firstClass file
+
+            var firstFile = require('./<name of the firstClass file>')
+
+
+5. Once the object of the firstClass file is created, methods from within
+can be called
+
+            var firstFile = require('./<name of the firstClass file>')
+
+            firstFile.navigateToThePage();
+
+6. When secondClass.js will be executed by ~node secondClass.js
+it will run the content of the firstClass.js, method navigateToThePage()
