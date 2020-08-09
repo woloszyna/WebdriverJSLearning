@@ -1,4 +1,3 @@
-var BasePage = require("./base");
 var webdriver = require('selenium-webdriver');
 var BasePage = require('./base');
 var By = webdriver.By;
