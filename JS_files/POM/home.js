@@ -1,24 +1,11 @@
 var webdriver = require('selenium-webdriver');
-var driver;
+var BasePage = require('./base');
+var By = webdriver.By;
+class HomePage extends BasePage{
 
-class homePage{
-
-    constructor() {
-        driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
+    clickOdAdoptionLink() {
+        driver.findElement(By.css('[name=nav_adopt]')).click();
+        return require('./adoption');
     }
-
-    openPage() {
-        
-        driver.get('https://www.wp.pl/');
-
-    }
-
-    closePage() {
-        
-        driver.quit();
-
-    }
-
 }
-
-module.exports = new homePage();
+module.exports = new HomePage();
