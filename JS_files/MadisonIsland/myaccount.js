@@ -1,12 +1,6 @@
-var BasePage = require('./base');
-var webdriver = require('selenium-webdriver');
-var By = webdriver.By;
-
-class myAccount extends BasePage{
-
-    clickOnLoginBtn() {
-        driver.findElement(By.name('send')).click();
-    }
-
-}
-module.exports = new myAccount();
+/*
+Scenario:
+1. Access the http://demo-store.seleniumacademy.com/
+2. Click on Account > My Account
+3. Click on Login button => error
+*/
