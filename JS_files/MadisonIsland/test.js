@@ -1,6 +1,7 @@
 var HomePage = require('./home');
 
-HomePage.navigateToHomePage();
-var accessMyAcc = HomePage.clickOnMyAccount();
-accessMyAcc.clickOnLoginBtn();
-//HomePage.tearDown();
+HomePage.landingPage();
+var register = HomePage.accessRegistrationPage();
+var regConf = register.registerAccount();
+regConf.logout();
+HomePage.tearDown();
