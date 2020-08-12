@@ -1,16 +1,16 @@
 var webdriver = require('selenium-webdriver');
-var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.firefox()).build();
+var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
 
 class BasePage{
-    constructor(){
+    constructor() {
         global.driver = driver;
     }
 
-    accessLandingPage(){
+    getHomePage() {
         driver.get('http://demo-store.seleniumacademy.com/');
     }
 
-    tearDown(){
+    tearDown() {
         driver.quit();
     }
 

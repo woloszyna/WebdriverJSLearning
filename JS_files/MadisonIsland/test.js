@@ -1,8 +1,8 @@
 var HomePage = require('./home');
+//This Test was ran on macOs
 
-
-HomePage.accessLandingPage();
+HomePage.getHomePage();
 var accessRegPage = HomePage.accessRegPage();
-var registerUser = accessRegPage.registerUser();
-registerUser.logOut();
-HomePage.tearDown();
+var accessRegConfirmation = accessRegPage.detailsForRegistration();
+accessRegConfirmation.logOut();
+accessRegConfirmation.tearDown();
