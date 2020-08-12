@@ -1,7 +1,8 @@
 var HomePage = require('./home');
 
-HomePage.landingPage();
-var register = HomePage.accessRegistrationPage();
-var regConf = register.registerAccount();
-regConf.logout();
+
+HomePage.accessLandingPage();
+var accessRegPage = HomePage.accessRegPage();
+var registerUser = accessRegPage.registerUser();
+registerUser.logOut();
 HomePage.tearDown();

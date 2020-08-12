@@ -6,7 +6,7 @@ class BasePage{
         global.driver = driver;
     }
 
-    landingPage(){
+    accessLandingPage(){
         driver.get('http://demo-store.seleniumacademy.com/');
     }
 
