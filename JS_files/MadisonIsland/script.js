@@ -26,7 +26,7 @@ driver.getAllWindowHandles().then(function getWindowHandles(allHandles){
         });
     });
 
-    //5. Now, let's switch to the parent window and print it's value
+    //5. Now, let's switch to the parent window and print it's value.
     driver.switchTo().window(parent);
     driver.getTitle().then(function(text){
         console.log('Switched back to Parent Window: ' + text);
