@@ -25,7 +25,7 @@ driver.getAllWindowHandles().then(function getWindowHandles(allHandles) {
     
     //5. Store the current (child window) window as a child variable
     var child = driver.getWindowHandle();
-    
+
     driver.findElement(webdriver.By.css('h1')).then(function (heading) {
         heading.getText().then(function (text) {
             console.log('Child Window: ' + text);
